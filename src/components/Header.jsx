@@ -1,7 +1,11 @@
-import React from 'react'
+import Counter from "./Counter";
+import Logo from "./Logo";
 
 export default function Header() {
-  return (
-    <div>Header</div>
-  )
+	return (
+		<header>
+			<Logo />
+			<Counter />
+		</header>
+	);
 }
