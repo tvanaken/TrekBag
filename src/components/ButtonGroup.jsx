@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-export default function ButtonGroup() {
+export default function ButtonGroup({ handleRemoveAllItems }) {
 	const secondaryButtons = [
 		"Mark all as complete",
 		"Mark all as incomplete",
@@ -12,7 +12,11 @@ export default function ButtonGroup() {
 		<section className="button-group">
 			{secondaryButtons.map((text) => {
 				return (
-					<Button key={text} type="secondary">
+					<Button
+						handleRemoveAllItems={handleRemoveAllItems}
+						key={text}
+						type="secondary"
+					>
 						{text}
 					</Button>
 				);
