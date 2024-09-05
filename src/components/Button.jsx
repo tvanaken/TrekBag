@@ -1,10 +1,8 @@
-export default function Button({ type, children, handleRemoveAllItems }) {
+export default function Button({ onClick, buttonType, children }) {
 	return (
 		<button
-			onClick={() => {
-				handleRemoveAllItems();
-			}}
-			className={`btn ${type === "secondary" ? "btn--secondary" : ""}`}
+			onClick={onClick}
+			className={`btn ${buttonType === "secondary" ? "btn--secondary" : ""}`}
 		>
 			{children}
 		</button>
